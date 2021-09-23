@@ -21,12 +21,14 @@ button.addEventListener("click", () => {
 });
 
 // #3 Follow me!
-// TODO
 
+const cow = document.getElementsByClassName("follow-me")[0];
 const followMeParent = document.getElementById("follow-me-parent");
-const followMe = document.getElementsByClassName("follow-me")[0];
-followMeParent.addEventListener("mouseover", () => {
+followMeParent.addEventListener("mousemove", (e) => {
   console.log("entered");
+  const { offsetX, offsetY } = e;
+
+  cow.style = `position:absolute;top:${offsetY}px;left:${offsetX}px`;
 });
 
 // #4 Children
