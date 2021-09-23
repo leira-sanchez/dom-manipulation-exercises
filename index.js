@@ -25,7 +25,6 @@ button.addEventListener("click", () => {
 const cow = document.getElementsByClassName("follow-me")[0];
 const followMeParent = document.getElementById("follow-me-parent");
 followMeParent.addEventListener("mousemove", (e) => {
-  console.log("entered");
   const { offsetX, offsetY } = e;
 
   cow.style = `position:absolute;top:${offsetY}px;left:${offsetX}px`;
@@ -48,7 +47,6 @@ hasChildrenUl.lastElementChild.style.backgroundColor = "palevioletred";
 const p = document.getElementsByClassName("wrote")[0];
 const input = document.querySelector("input");
 input.addEventListener("input", (e) => {
-  console.log(e.target.value);
   p.innerHTML = e.target.value;
 });
 
